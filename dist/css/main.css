@@ -1,0 +1,125 @@
+.container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden; }
+
+.btn-main, .btn-light, .btn-dark {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.btn-main {
+  color: #333;
+  background-color: #7D7F7E; }
+
+.btn-light {
+  color: #333;
+  background-color: #f4f4f4; }
+
+.btn-dark {
+  color: #f4f4f4;
+  background-color: #fff; }
+
+.btn-toggle {
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.5s; }
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: #7D7F7E; }
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem; }
+
+.text-center {
+  text-align: center; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Quantico', sans-serif;
+  line-height: 1.7;
+  background: #fff;
+  transition: transform 0.3s ease; }
+
+body.show-nav {
+  transform: translateX(200px); }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+ul {
+  list-style: none; }
+
+h2, h3, h4 {
+  text-transform: uppercase; }
+
+img {
+  width: 100%; }
+
+#main-nav {
+  position: fixed;
+  background-color: #ccc;
+  padding-top: 1rem;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 100;
+  transform: translateX(-100%); }
+  #main-nav ul {
+    padding: 0;
+    margin: 0; }
+  #main-nav li {
+    padding: 1rem 1.5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+  #main-nav .nav-item {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s; }
+    #main-nav .nav-item:hover {
+      border-color: #fff; }
+    #main-nav .nav-item.current {
+      border-color: #7D7F7E; }
+  #main-nav .logo {
+    font-size: 3rem;
+    text-align: center;
+    height: 75px;
+    width: 75px;
+    margin: 3.7rem; }
+
+#header-home {
+  color: #fff;
+  background-color: #900C3F;
+  height: 100vh;
+  width: 100vw;
+  padding: 40px 15px;
+  position: relative; }
+  #header-home .navbar-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+  #header-home .header-content {
+    text-align: center;
+    padding-top: 20%; }
+    #header-home .header-content h1 {
+      font-size: 4rem;
+      line-height: 1.2; }
