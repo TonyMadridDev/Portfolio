@@ -35,19 +35,20 @@
   }
 
   &-toggle {
-    border: 0;
-    border-radius: 5px;
+    @extend %btn-shared;
     padding: 8px 12px;
-    cursor: pointer;
-    transition: all 0.5s;
-
+    border-radius: 50%;
+    position: fixed;
+    display: inline-block;
+    top: 70px;
+    z-index: 201;
   }
 }
 
 button[class^='btn-']:hover,
 a[class^='btn-']:hover,
 input[class^='btn-']:hover {
-  background-color: $main-color;
+  background-color: $medium-color;
 }
 
 .lead {

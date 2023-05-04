@@ -1,7 +1,27 @@
 const toggle = document.getElementById('navbar-toggle');
-const close = document.getElementById('close');
-const open = document.getElementById('open');
 
+
+function navBtnToggle(e) {
+  if (e.target.classList.contains('btn-toggle') | e.target.classList.contains('fa-arrow-down')) {
+    document.querySelector('.navbar-list').classList.toggle('show-nav');
+    navArrowToggle();
+  } else {
+
+  }
+};
+
+function navArrowToggle(e) {
+  console.log('hi');
+};
+
+
+
+
+// Event Listeners
 
 // Toggle Nav
-toggle.addEventListener('click', () => document.body.classList.toggle('show-nav'));
+toggle.addEventListener('click', navBtnToggle);
+
+
+
+
