@@ -34,8 +34,9 @@ img {
 
 .nav-btn-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  width: 500px;
 }
 
 
@@ -61,13 +62,13 @@ img {
     background-color: #fff;
     z-index: 200;
     transform: translateY(-100%);
-    transition: all 0.8s ease;
+    transition: all 0.8s ease-in-out;
 
   }
 
   .navbar-list.show-nav{
+      position:fixed;
       transform: translateY(0%);
-
     }
  
 
@@ -89,11 +90,6 @@ img {
     }
   
   }
-  .logo {
- 
-  }
-
-
 }
 
 // Header 
