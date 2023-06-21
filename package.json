@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^8.0.0"
+  },
+  "dependencies": {
+    "swiper": "^9.4.1"
   }
 }

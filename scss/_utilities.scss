@@ -24,14 +24,14 @@
 
   &-light {
     @extend %btn-shared;
-    color: #333;
-    background-color: $light-color;
+    color: $main-color;
+    border: 3px #fff solid;
   }
 
   &-dark {
     @extend %btn-shared;
-    color: #f4f4f4;
-    background-color: $dark-color;
+    color: $main-color;
+    border: 3px $main-color solid;
   }
 
   &-toggle {
@@ -48,7 +48,8 @@
 button[class^='btn-']:hover,
 a[class^='btn-']:hover,
 input[class^='btn-']:hover {
-  background-color: $medium-color;
+  background-color: $main-color;
+  color: #fff;
 }
 
 .lead {
@@ -58,4 +59,15 @@ input[class^='btn-']:hover {
 
 .text-center {
   text-align: center;
+}
+
+// Swiper Pagination/btn
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff !important;
 }
