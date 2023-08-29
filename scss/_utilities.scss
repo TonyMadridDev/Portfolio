@@ -18,7 +18,7 @@
 .btn {
   &-main {
     @extend %btn-shared;
-    color: #333;
+    color: $main-color;
     background-color: $main-color;
   }
 

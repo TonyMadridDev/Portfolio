@@ -13,7 +13,7 @@
   cursor: pointer; }
 
 .btn-main {
-  color: #333;
+  color: #FB9127;
   background-color: #FB9127; }
 
 .btn-light {
@@ -64,51 +64,39 @@ body {
   line-height: 1.7; }
 
 a {
-  text-decoration: none;
-  color: #2a2f3b; }
+  text-decoration: none; }
 
 ul {
   list-style: none; }
 
-img {
-  width: 100%; }
-
 #main-nav {
-  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
   #main-nav .navbar-list {
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    top: 0;
-    height: 70px;
-    width: 100%;
-    z-index: 200; }
-  #main-nav li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px 20px; }
-  #main-nav .nav-item {
-    font-size: 30px;
-    color: #FB9127;
-    border-bottom: 2px transparent solid;
-    transition: all 0.5s ease; }
-    #main-nav .nav-item:hover {
-      border-color: #FB9127; }
+    width: 100%; }
+    #main-nav .navbar-list li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      padding: 10px 20px; }
+      #main-nav .navbar-list li .nav-item {
+        font-size: 30px;
+        color: #FB9127;
+        border-bottom: 2px transparent solid;
+        transition: all 0.5s ease; }
+        #main-nav .navbar-list li .nav-item:hover {
+          border-color: #FB9127; }
 
 #header-home {
   color: #fff;
   height: 100vh;
-  width: 100vw;
-  padding: 40px 15px;
-  position: relative; }
+  width: 100%; }
   #header-home .header-content {
     display: flex;
     flex-direction: column;
@@ -125,25 +113,24 @@ img {
       justify-content: center;
       text-align: center;
       align-items: center;
-      width: 100%;
-      height: 150px;
-      margin-bottom: 20px; }
-    #header-home .header-content .lead {
-      font-size: 1.5rem;
-      margin-top: 20px;
-      width: 70%; }
+      margin-bottom: 20px;
+      padding: 5px; }
+      #header-home .header-content .lead-contain .lead {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        width: 70%; }
     #header-home .header-content .hero-btn-container {
-      width: 100%;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center; }
       #header-home .header-content .hero-btn-container a {
+        width: 200px;
         margin: 5px; }
 
 #tools-section {
   width: 100%;
-  padding-bottom: 10rem; }
+  padding-bottom: 15rem; }
   #tools-section .tools-header {
     display: flex;
     justify-content: center;
@@ -191,7 +178,8 @@ img {
         justify-content: center;
         align-items: center; }
         #tools-section .tools-container .tool-box .tools h2 {
-          font-size: 2rem; }
+          font-size: 2rem;
+          text-align: center; }
         #tools-section .tools-container .tool-box .tools i {
           margin: 20px;
           opacity: 0; }
@@ -221,3 +209,107 @@ img {
       justify-content: center;
       align-items: center;
       font-size: 20px; }
+
+@media (max-width: 950px) {
+  #main-nav .navbar-list {
+    margin: 15px;
+    justify-content: center;
+    height: 100%; }
+    #main-nav .navbar-list li .nav-item {
+      font-size: 35px; }
+  #header-home {
+    height: 80rem; }
+    #header-home .header-content {
+      margin-top: 2rem;
+      padding-top: 5rem; }
+      #header-home .header-content h1 {
+        font-size: 1.7rem; }
+      #header-home .header-content .lead-contain {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 20px; }
+        #header-home .header-content .lead-contain .lead {
+          width: 80%;
+          font-size: 1.2rem; }
+      #header-home .header-content .hero-btn-container {
+        flex-direction: column; }
+        #header-home .header-content .hero-btn-container a {
+          width: 200px;
+          margin: 10px; } }
+
+@media (max-width: 500px) {
+  #main-nav .navbar-list {
+    margin: 0;
+    justify-content: center;
+    height: 100%; }
+    #main-nav .navbar-list li .nav-item {
+      font-size: 25px; }
+  #header-home {
+    height: 60rem; }
+    #header-home .header-content {
+      margin-top: 6rem;
+      height: 50%; }
+      #header-home .header-content h1 {
+        font-size: 1.5rem;
+        margin: 30px 20px 0 20px; }
+      #header-home .header-content .lead-contain {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin: 0; }
+        #header-home .header-content .lead-contain .lead {
+          margin-top: 10px;
+          width: 80%;
+          font-size: 14px;
+          line-height: 2.1; }
+      #header-home .header-content .hero-btn-container {
+        flex-direction: column; }
+        #header-home .header-content .hero-btn-container a {
+          width: 200px;
+          margin: 10px; } }
+
+@media (max-width: 375px) {
+  #main-nav {
+    width: 100%; }
+    #main-nav .navbar-list {
+      margin: 10px;
+      padding: 5px;
+      justify-content: center;
+      height: 100%; }
+      #main-nav .navbar-list li {
+        padding: 10px; }
+        #main-nav .navbar-list li .nav-item {
+          font-size: 25px; }
+  #header-home {
+    height: 50rem; }
+    #header-home .header-content {
+      height: 100vh;
+      margin-top: 0;
+      padding: 0; }
+      #header-home .header-content h1 {
+        font-size: 1.3rem;
+        margin: 2rem 2rem; }
+        #header-home .header-content h1 span {
+          font-size: 1.5rem; }
+      #header-home .header-content .lead-contain {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center; }
+        #header-home .header-content .lead-contain .lead {
+          display: none;
+          margin-top: 0;
+          font-size: 12px;
+          line-height: 2.5; }
+      #header-home .header-content .hero-btn-container {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        margin: 0 2rem; }
+        #header-home .header-content .hero-btn-container a {
+          width: 100%;
+          padding: 10px; } }
