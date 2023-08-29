@@ -2,6 +2,9 @@
 @import 'utilities';
 
 
+
+
+
 // General Styles
 * {
   box-sizing: border-box;
@@ -10,14 +13,12 @@
 }
 
 body {
-  background-color: #f3f6fa;
-
-}
-
-body {
-  font-family: 'Quantico', sans-serif;
+  background: rgba(0,0,0,0.75) url('../img/pixel.png');
+  background-blend-mode: darken;
+  font-family: 'Press Start 2P', sans-serif;
   line-height: 1.7;
 }
+
 
 
 a {
@@ -55,19 +56,8 @@ img {
     height: 70px;
     width: 100%;
     z-index: 200;
-
-    // transform: translateY(-100%);
-    transition: all 0.8s ease-in-out;
-
   }
-
-  .navbar-list.show-nav{
-      position:fixed;
-      transform: translateY(0%);
-      
-    }
  
-
   li {
     display: flex;
     justify-content: center;
@@ -95,12 +85,11 @@ img {
 #header {
   // Header Home
   &-home {
-    color: #000;
+    color: $secondary-color;
     height: 100vh;
     width: 100vw;
     padding: 40px 15px;
     position: relative;
-    z-index: 10px;
 
     // Header Content
     .header-content {
@@ -108,20 +97,34 @@ img {
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      padding-top: 20%;
+      padding-top: 15%;
 
       h1 {
-        font-size: 4rem;
-        line-height:1.2;
-      }
+        font-size: 2.5rem;
+        line-height:1.9;
 
-      span.txt-type {
+        span {
           color: $main-color;
+        }
+      }
+      
+      .lead-contain{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: 150px;
+        margin-bottom: 20px
+      
       }
 
-      p {
-        font-size: 2rem;
+      .lead {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        width: 70%;
       }
+
 
       .hero-btn-container {
         width: 100%;
@@ -143,32 +146,28 @@ img {
 #tools {
   &-section {
     width: 100%;
-    height: 100%;
-    background-color: $main-color;
-    padding-bottom: 6rem ;
+    padding-bottom: 10rem ;
     
     .tools-header {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 50px ;
 
       h1 {
         margin-top: 30px;
-        color: #fff;
+        color: $main-color;
         font-size: 2rem;
       }
 
     .fa-toolbox {
-      color:#fff;
-      margin: 25px 0 0 20px;
-      
+      color:$main-color;
+      margin: 25px 0 0 20px; 
     }
     }
     .tools-container {
       width: 100%;
       height: 100%;
-      display:  flex;
+      display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
@@ -176,16 +175,28 @@ img {
    
 
       .tool-box {
+        background: url('../img/crate1.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: $main-color;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
         width: 500px;
-        height: 200px;
+        height: 400px;
         margin: 30px;
-        background-color: #fff;
         border-radius: 5px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background: url('../img/crate1Opened.png') ;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            color: rgba(0, 0, 0, 0);
+
+        }
 
       .tools{ 
         width: 100%;
@@ -195,10 +206,18 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
+
+          h2{ 
+            font-size: 2rem;
+          }
           
           i {
             margin: 20px;
-            
+            opacity: 0;
+          
+            &:hover {
+              opacity: 1;
+            }
           }
         }
       }
@@ -212,7 +231,7 @@ img {
 #work {
   &-section {
     height: 600px;
-    background-color: $medium-color;
+    background-color: $main-color;
 
 
 
@@ -241,7 +260,7 @@ img {
         height: 100%;
         &-wrapper{
           .swiper-slide{
-          background-color: #bc6d8b;
+          background-color: #ccc;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -251,148 +270,3 @@ img {
     }
   }
 }
-
-// About Section
-
-#about{
-  &-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    margin: 20px;
-
-    .about-img {
-      width: 50%;
-      height: 100%;
-      background: url('../img/pp.jpg') no-repeat center center/ cover;
-      border-radius: 10px;
-      background-size: cover;
-    }
-      
-    
-    .about-info-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        height: 100%;
-
-        h2 {
-          font-size: 30px;
-          color: $main-color;
-          margin: 10px
-        }
-        
-        p {
-          margin: 0 30px 0 40px;
-          padding: 20px;
-          line-height: 1.7;
-          font-size:  1.2rem;
-        
-      }
-    }
-  }
-}
-
-
-// Contact
-
-// Helpers
-@mixin clearfix {
-   &:after {
-      content: "";
-      display: table;
-      clear: both;
-  }
-}
-
-// Grid
-.row {
-   @include clearfix;
-   margin: -20px 0;
-   .col {
-      padding: 0 20px;
-      float: left;
-      box-sizing: border-box;
-      &.x-50 {
-         width: 50%;
-      }
-      &.x-100 {
-         width: 100%;
-      }
-   }
-}
-
-.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: $main-color;
-
-
-.get-in-touch {
-  margin: 30px;
-      max-width: 500px;
-  
-  .title {
-     text-align: center;
-     text-transform: uppercase;
-     letter-spacing: 3px;
-     font-size: 30px;
-     line-height: 48px;
-     padding-bottom: 48px;
-     color: #fff;
-  }
-}
-
-.contact-form {
-   .form-field {
-    display: flex;
-    justify-content: center;
-      position: relative;
-      margin: 32px 0;
-   }
-   .input-text {
-      display: block;
-      color: #fff;
-      width: 100%;
-      height: 36px;
-      border-width: 0 0 2px 0;
-      border-color: #fff;
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: 400;
-      background-color: $main-color;
-      
-      &:focus {
-         outline: none;
-      }
-      
-      &:focus,
-      &.not-empty {
-         + .label {
-            transform: translateY(-24px);
-         }
-      }
-   }
-   .label {
-      position: absolute;
-      left: 20px;
-      bottom: 11px;
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: 400;
-      color: #fff;
-      cursor: text;
-      transition: transform .2s ease-in-out;
-   }
-   .btn-contact {
-    font-family: 'Quantico', sans-serif;
-    font-size: 1rem;
-   }
-}
-}
-
